@@ -9,16 +9,18 @@ workflows:
     scripts:
       - name: Set up local.properties
         script: |
+          cd app
           echo "sdk.dir=$HOME/programs/android/sdk" > local.properties
       - name: Generate gradlew
         script: |
+          cd app
           flutter pub get
           flutter build apk --debug
       - name: Build Android app
         script: |
-          cd android && ./gradlew assembleDebug
+          cd app/android && ./gradlew assembleDebug
     artifacts:
-      - app/build/outputs/**/*.apk
+      - app/app/build/outputs/**/*.apk
     publishing:
       email:
         recipients:
