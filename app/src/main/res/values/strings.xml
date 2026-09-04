@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">Qaza Namaz Tracker</string>
+    <string name="prayer_fajr">Fajr (فجر)</string>
+    <string name="prayer_dhuhr">Dhuhr (ظہر)</string>
+    <string name="prayer_asr">Asr (عصر)</string>
+    <string name="prayer_maghrib">Maghrib (مغرب)</string>
+    <string name="prayer_isha">Isha (عشاء)</string>
+    <string name="prayer_witr">Witr (وتر)</string>
+</resources>

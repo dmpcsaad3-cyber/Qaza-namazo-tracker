@@ -1,0 +1,6 @@
+{
+  "name": "Qaza Namaz Tracker",
+  "description": "Track and record your Qaza (missed) prayers with counters, calculation tools, and daily history logs.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
