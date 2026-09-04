@@ -10,6 +10,9 @@ workflows:
       - name: Set up local.properties
         script: |
           echo "sdk.dir=$HOME/programs/android/sdk" > local.properties
+      - name: Make gradlew executable
+        script: |
+          chmod +x ./gradlew
       - name: Build Android app
         script: |
           ./gradlew assembleDebug
@@ -18,4 +21,4 @@ workflows:
     publishing:
       email:
         recipients:
-          - dmpcsaad3@gmail.com
+          - dmpcsaad3@gmail.com
