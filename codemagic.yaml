@@ -12,10 +12,10 @@ workflows:
           echo "sdk.dir=$HOME/programs/android/sdk" > local.properties
       - name: Build Android app
         script: |
-          ./gradlew assembleDebug   # <-- ye line
+          ./gradlew assembleDebug
     artifacts:
-      - app/build/outputs/**/*.apk   # <-- aur ye line
+      - app/build/outputs/**/*.apk
     publishing:
       email:
         recipients:
-          - dmpcsaad3@gmail.com
+          - dmpcsaad3@gmail.com
