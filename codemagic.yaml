@@ -15,12 +15,12 @@ workflows:
         script: |
           cd app
           flutter pub get
-          flutter build apk --debug
       - name: Build Android app
         script: |
-          cd app/android && ./gradlew assembleDebug
+          cd app
+          ./gradlew assembleDebug
     artifacts:
-      - app/app/build/outputs/**/*.apk
+      - app/build/outputs/**/*.apk
     publishing:
       email:
         recipients:
