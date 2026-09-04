@@ -11,14 +11,16 @@ workflows:
         script: |
           cd app
           echo "sdk.dir=$HOME/programs/android/sdk" > local.properties
-      - name: Make gradlew executable
+      - name: Generate android folder
         script: |
-          chmod +x ./app/gradlew
+          cd app
+          flutter create .
       - name: Build Android app
         script: |
-          ./app/gradlew assembleDebug
+          cd app
+          flutter build apk --debug
     artifacts:
-      - app/build/outputs/**/*.apk
+      - app/build/app/outputs/**/*.apk
     publishing:
       email:
         recipients:
