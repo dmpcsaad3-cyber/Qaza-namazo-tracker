@@ -10,12 +10,13 @@ workflows:
       - name: Set up local.properties
         script: |
           echo "sdk.dir=$HOME/programs/android/sdk" > local.properties
-      - name: Make gradlew executable
+      - name: Generate gradlew
         script: |
-          chmod +x ./gradlew
+          flutter pub get
+          flutter build apk --debug
       - name: Build Android app
         script: |
-          ./gradlew assembleDebug
+          cd android && ./gradlew assembleDebug
     artifacts:
       - app/build/outputs/**/*.apk
     publishing:
